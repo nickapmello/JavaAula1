@@ -15,8 +15,8 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question('Digite os nomes separados por vírgula (ex: João, Maria, José): ', (nomesInput) => {
-    rl.question('Digite as notas separadas por vírgula (ex: 5, 6, 7): ', (notasInput) => {
+rl.question('Digite os nomes separados por vírgula: ', (nomesInput) => {
+    rl.question('Digite as notas separadas por vírgula: ', (notasInput) => {
         const nomes = nomesInput.split(',').map(nome => nome.trim());
         const notas = notasInput.split(',').map(nota => parseFloat(nota.trim()));
         console.log(`Aprovados: ${ex3(nomes, notas).join(', ')}`);

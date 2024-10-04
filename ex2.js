@@ -10,7 +10,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question('Digite as notas separadas por vírgula (ex: 5, 6, 7): ', (input) => {
+rl.question('Digite as notas separadas por vírgula: ', (input) => {
     const notas = input.split(',').map(nota => parseFloat(nota.trim()));
     console.log(`Média: ${ex2(notas).toFixed(2)}`);
     rl.close();

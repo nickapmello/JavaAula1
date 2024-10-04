@@ -15,7 +15,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question('Digite os nomes separados por vírgula (ex: João, Maria, Fernanda): ', (input) => {
+rl.question('Digite os nomes separados por vírgula: ', (input) => {
     const nomes = input.split(',').map(nome => nome.trim());
     console.log(`Nomes com mais de 5 letras: ${ex4(nomes).join(', ')}`);
     rl.close();
